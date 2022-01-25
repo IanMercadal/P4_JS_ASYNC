@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TIMEINN</title>
+        <link rel="stylesheet" href="css/estilos.css">
+
+        <link rel="icon" type="image/png" href="img/newspaper-folded.png">
+
+        <script src="https://kit.fontawesome.com/e9fc7f4de8.js" crossorigin="anonymous"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Merriweather:wght@300;400&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- COMIENZO MENU -->
+
+        <nav class="menu">
+            <ul class="elementos">
+                <li><a href="index.html"><img class="logo-menu" src="img/logo.png"></a></li>
+                <li id="inicio-menu"><a href="index.html">Inicio</a></li>
+                <li id="eventos-menu" >Eventos</li>
+                <li id="noticias-menu" >Noticias</li>
+                <li id="calendario-menu">Calendario</li>
+                <li id="login-menu">
+                    <i class="fas fa-sign-in-alt"></i>
+                    <p><a href="login.html">Login</a></p>
+                </li>
+                <li id="register-menu">
+                    <i class="fas fa-registered"></i>
+                    <p><a href="suscripcion.html">Register</a></p>
+                </li>
+                <li id="hamburger" class="hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="40" height="40" viewbox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <line x1="4" y1="6" x2="20" y2="6"/>
+                        <line x1="4" y1="12" x2="20" y2="12"/>
+                        <line x1="4" y1="18" x2="20" y2="18"/>
+                    </svg>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- FINAL MENU -->
+
+        <!-- COMIENZO BANNER -->
+
+        <div class="banner">
+            <video src="video/video.mp4" allow="autoplay" autopause=0 loop=1 autoplay="1">
+        </div>
+
+        <!-- FINAL BANNER -->
+
+        <!-- COMIENZO MAIN -->
+
+        <div id="user-name">
+            
+        </div>
+
+        <h1>TimeInn</h1>
+        <main class="main">
+            <!-- COMIENZO COLUMNA-IZQUIERDA -->
+            <div class="columna-izquierda">
+                <h2>Eventos</h2>
+
+                <!-- COMIENZO EVENTOS -->
+                <div id="eventos"></div>
+
+                <!-- FINAL EVENTOS -->
+            </div>
+
+            <!-- FINAL COLUMNA IZQUIERDA -->
+
+            <div class="columna-derecha">
+
+                <div id="calendario">
+                    <h2>Calendario</h2>
+                </div>
+
+                <!-- COMIENZO NOTICIAS -->
+                <div id="noticias">
+                    <h2>Noticias</h2>
+
+                    <!-- COMIENZO NOTICIAS-CONTAINER -->
+                    <div class="noticias-container">
+    
+                    </div>
+                    <!-- FINAL NOTICIAS-CONTAINER -->
+                </div>
+                <!-- FINAL NOTICIAS -->
+        
+                <button class="boton-scroll" id="boton-scroll-up"><i class="fas fa-arrow-up"></i> Volver arriba</button>
+            </div>
+            <!-- FINAL COLUMNA DERECHA -->
+        </main>
+
+        <!-- FINAL MAIN -->
+
+        <!-- COMIENZO FOOTER -->
+        <footer>
+            <h3>
+                Copyright <i class="far fa-copyright"></i> todos los derechos reservados 2021.
+            </h3>
+        </footer>
+        <!-- FINAL FOOTER -->
+
+        <!-- COMIENZO SCRIPTS -->
+        <script type="module" src="js/script.js"></script>
+        <!-- FINAL SCRIPTS -->
+    </body>
+
+</html>

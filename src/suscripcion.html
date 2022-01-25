@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Log In</title>
+        <link rel="stylesheet" href="css/estilos.css">
+        <link rel="icon" type="image/png" href="img/newspaper-folded.png">
+        <script src="https://kit.fontawesome.com/e9fc7f4de8.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Merriweather:wght@300;400&display=swap" rel="stylesheet">
+    </head>
+
+<body id="login">
+    <h1>Registro</h1>
+    <main class="main-login">
+        <form id="registro">
+            <label for="Nombre"><h2>Introduce el Nombre de Usuario:</h2></label>
+            <input type="text" id="Nombre" required>
+            <label for="Correo"><h2>Introduce el Correo Electronico:</h2></label>
+            <input type="text" id="Correo" ><br>
+    
+            <label for="Contrasena"><h2>Introduce la Contraseña:</h2></label>
+            <input type="text" id="Contrasena">
+            <img id="contrasena1" src="https://cdn.pixabay.com/photo/2016/12/18/11/04/eye-1915454_1280.png">
+    
+            <br>
+
+            <label for="RepetirContrasena"><h2>Introduce de Nuevo la Contraseña:</h2></label>
+            <input type="text" id="RepetirContrasena" >
+            <img id="contrasena2" src="https://cdn.pixabay.com/photo/2016/12/18/11/04/eye-1915454_1280.png">
+
+            <br>
+
+            <div class="botones">
+                <button id="Enviar" class="btn">Guardar</button>
+                <input type="reset" id="Resetear" class="btn">
+            </div>
+
+
+            <div class="salida-div">
+                <p id="salida"></p>
+            </div>
+        </form> 
+
+
+        <div class="botones">
+            <a class="btn" href="login.html">Inicia Sesión!</a>
+            <a class="btn" href="index.html">Volver a Inicio</a>
+        </div>
+
+    
+    </main>
+    
+</body>
+<script src="js/modules/suscripcion.js"></script>
+
+</html>

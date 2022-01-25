@@ -1,0 +1,11 @@
+{
+    "events": [
+        {
+            "id": 1,
+            "titulo": "Mandarina",
+            "imagen": "https://raw.githubusercontent.com/classicoman2/fakeRESTserver/master/assets/image1.jpg",
+            "lugar": "Grecia, Mikonos",
+            "fecha": "11/09/2002"
+        }
+    ]
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+    <link rel="icon" type="image/png" href="img/newspaper-folded.png">
+
+    <script src="https://kit.fontawesome.com/e9fc7f4de8.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Merriweather:wght@300;400&display=swap" rel="stylesheet">
+    
+    <!-- A los estilos -->
+    <link rel="stylesheet" type="text/css" href="css/estilos.css" />
+    
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#Fecha").datepicker();
+        });
+    </script>
+</head>
+
+<body>
+
+    <nav class="menu">
+        <ul class="elementos">
+            <li><a href="index.html"><img class="logo-menu" src="img/logo.png"></a></li>
+            <li id="inicio-menu"><a href="index.html">Inicio</a></li>
+            <li id="eventos-menu">Eventos</li>
+            <li id="noticias-menu">Noticias</li>
+            <li id="calendario-menu">Calendario</li>
+            <li id="login-menu">
+                <i class="fas fa-sign-in-alt"></i>
+                <p><a href="login.html">Login</a></p>
+            </li>
+            <li id="register-menu">
+                <i class="fas fa-registered"></i>
+                <p><a href="suscripcion.html">Register</a></p>
+            </li>
+            <li id="hamburger" class="hidden" onclick="MostrarMenu()">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="40"
+                    height="40" viewbox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <line x1="4" y1="6" x2="20" y2="6" />
+                    <line x1="4" y1="12" x2="20" y2="12" />
+                    <line x1="4" y1="18" x2="20" y2="18" />
+                </svg>
+            </li>
+        </ul>
+    </nav>
+    <nav class="menu-evento">
+        <ul class="elementos">
+           <li id="IntroducirEvento">
+                <p class="menu-evento-texto">Introducir Evento</p>
+            </li>
+            <div>
+                <p class="menu-evento-texto">Ordenar por:</p>
+                <div id="Ordenar">
+                    <li id="OrdenarLugar">
+                        <p class="menu-evento-texto">LUGAR</p>
+                    </li>
+                    <li id="OrdenarId">
+                        <p class="menu-evento-texto">ID</p>
+                    </li>
+                </div>
+            </div>
+        </ul>
+    </nav>
+    <div id="formulario">
+        <form id="FormularioEventos">
+            <p id="CerrarEvento">x</p>
+            <label for="Titulo">Introduce el Titulo:</label>
+            <input type="text" id="Titulo" required><br>
+
+            <label for="Lugar">Introduce el Lugar:</label>
+            <input type="text" id="Lugar" required><br>
+
+            <label for="Fecha">Introduce la Fecha:</label>
+            <input type="text" id="Fecha" required><br>
+            
+            <p>Categoria del evento:</p>
+            <input type="radio" id="deportes" name="imagen">
+            <label for="deportes">Deportes</label><br>
+            
+            <input type="radio" id="musica" name="imagen">
+            <label for="musica">Música</label><br>
+            
+            <input type="radio" id="arte" name="imagen">
+            <label for="arte">Arte</label><br>
+
+            <input type="radio" id="sociales" name="imagen">
+            <label for="sociales">Sociales</label><br>
+
+            <button id="Enviar">Guardar</button>
+            <input type="reset" id="Resetear">
+        </form>
+    </div>
+    <main id="salida"></main>
+    <footer>
+        <h3>
+            Copyright <i class="far fa-copyright"></i> todos los derechos reservados 2021.
+        </h3>
+    </footer>
+
+</body>
+
+<!-- COMIENZO SCRIPTS -->
+<script type="module" src="js/script.js"></script>
+<!-- FINAL SCRIPTS -->
+</html>

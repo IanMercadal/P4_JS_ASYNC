@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <link rel="icon" type="image/png" href="img/newspaper-folded.png">
+
+    <script src="https://kit.fontawesome.com/e9fc7f4de8.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Merriweather:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body id="login">
+
+    <h1>Log In</h1>
+
+    <main class="main-login">
+        <form id="Inciar-sesion">
+            <label for="Correo"><h2>Introduce el Correo Electronico:</h2></label>
+            <input type="text" id="Correo" required>
+            <br>
+            <label for="Contrasena"><h2>Introduce la Contraseña:</h2></label>
+            <input type="password" id="Contrasena" required>
+            <br>
+            <div id="Enviar" class="btn" onclick="guardar()">Guardar</div>
+            <div id ="Resetear" class="btn" type="reset">Resetear</div>
+
+            <div id="errores"></div>
+        </form>
+    
+        <div class="botones">
+            <h2>Otras opciones</h2>
+            <a class="btn" href="suscripcion.html">Crear Cuenta!</a>
+            <a class="btn" href="index.html">Volver a Inicio</a>
+        </div>
+    </main>
+    <!-- <p id="nombre"></p> -->
+
+</body>
+<script src="js/modules/login.js"></script>
+</html>
