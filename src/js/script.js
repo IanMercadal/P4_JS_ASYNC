@@ -1,8 +1,8 @@
 // IMPORTS
-import {
-    crearNoticia,
-    recorrerNoticia
-} from './modules/noticias.js';
+// import {
+//     crearNoticia,
+//     recorrerNoticia
+// } from './modules/noticias.js';
 
 import {
     CrearEventosIniciales,
@@ -11,6 +11,14 @@ import {
     OrdenarLugar
 } from './modules/eventos.js';
 
+import {
+    buscarImagenes,
+    mostrarNoticias
+} from './noticias_json.js'
+import {
+    buscarEventos,
+    mostrarEventos
+} from './eventos_json.js'
 // VARIABLES GLOBALES
 
 /*Creamos las variables globales primeramente, estas variables
@@ -24,6 +32,7 @@ const login = document.getElementById("login-menu");
 const register = document.getElementById("register-menu");
 const botonScrollTop = document.getElementById("boton-scroll-up");
 const hamburger = document.getElementById("hamburger");
+const noticiasContainer = document.querySelector(".noticias-container");
 
 const columnaIzquierda = document.querySelector('.columna-izquierda');
 var overlayActivo = false;
@@ -31,15 +40,20 @@ var overlayActivo = false;
 window.onload = function () {
 
     Cookies();
-    CrearEventosIniciales();
+    // CrearEventosIniciales();
     hamburgerMenu();
 
+
     if (columnaIzquierda) {
-        crearNoticia();
-        recorrerNoticia();
+        // crearNoticia();
+        // recorrerNoticia();
         Calendario();
         allowScrollIntoView();
         userName();
+        buscarImagenes();
+        buscarEventos();
+        // mostrarEventos();
+        // mostrarEventos();
     }
 
     if (columnaIzquierda == null) {
