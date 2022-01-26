@@ -1,24 +1,10 @@
 // IMPORTS
-// import {
-//     crearNoticia,
-//     recorrerNoticia
-// } from './modules/noticias.js';
+import {CrearEventosFormulario,OrdenarId,OrdenarLugar} from './modules/eventos.js';
 
-import {
-    CrearEventosIniciales,
-    CrearEventosFormulario,
-    OrdenarId,
-    OrdenarLugar
-} from './modules/eventos.js';
+import {buscarNoticias} from './modules/noticias_json.js';
 
-import {
-    buscarImagenes,
-    mostrarNoticias
-} from './noticias_json.js'
-import {
-    buscarEventos,
-    mostrarEventos,
-} from './eventos_json.js'
+import {buscarEventos} from './modules/eventos_json.js';
+
 // VARIABLES GLOBALES
 
 /*Creamos las variables globales primeramente, estas variables
@@ -40,20 +26,14 @@ var overlayActivo = false;
 window.onload = function () {
 
     Cookies();
-    // CrearEventosIniciales();
     hamburgerMenu();
 
-
     if (columnaIzquierda) {
-        // crearNoticia();
-        // recorrerNoticia();
         Calendario();
         allowScrollIntoView();
         userName();
-        buscarImagenes();
+        buscarNoticias();
         buscarEventos();
-        // mostrarEventos();
-        // mostrarEventos();
     }
 
     if (columnaIzquierda == null) {

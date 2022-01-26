@@ -1,6 +1,6 @@
 const noticiasContainer = document.querySelector(".noticias-container");
 
-export async function buscarImagenes() {
+export async function buscarNoticias() {
 
     const url = 'http://localhost:3000/noticias';
 
