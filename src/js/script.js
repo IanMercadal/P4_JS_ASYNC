@@ -17,7 +17,7 @@ import {
 } from './noticias_json.js'
 import {
     buscarEventos,
-    mostrarEventos
+    mostrarEventos,
 } from './eventos_json.js'
 // VARIABLES GLOBALES
 
@@ -57,6 +57,8 @@ window.onload = function () {
     }
 
     if (columnaIzquierda == null) {
+
+        buscarEventos();
 
         document.getElementById("IntroducirEvento").onclick = function () {
             on()
