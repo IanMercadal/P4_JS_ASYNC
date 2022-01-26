@@ -1,7 +1,7 @@
 // IMPORTS
 import {CrearEventosFormulario,OrdenarId,OrdenarLugar} from './modules/eventos.js';
 
-import {buscarNoticias} from './modules/noticias_json.js';
+import {buscarNoticias} from './modules/noticias.js';
 
 import {buscarEventos} from './modules/eventos_json.js';
 

@@ -15,7 +15,8 @@ export async function buscarNoticias() {
 }
 
 export function mostrarNoticias(eventos) {
-        // Iterar sobre el arreglo de imagenes y construir el HTML
+
+        // Iterar sobre el array de imagenes y construir el HTML
         eventos.forEach( evento => {
             const { titulo, imagen, texto, fecha } = evento;
     
@@ -33,6 +34,5 @@ export function mostrarNoticias(eventos) {
 
             </div>
             `;
-    
         });
 }
