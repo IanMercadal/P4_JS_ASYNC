@@ -1,9 +1,9 @@
 // IMPORTS
-import {CrearEventosFormulario,OrdenarId,OrdenarLugar} from './modules/eventos.js';
+// import {OrdenarId,OrdenarLugar} from './modules/eventos.js';
+// import {mostrarEventos} from './modules/app.js';
 
-import {buscarNoticias} from './modules/noticias.js';
-
-import {buscarEventos} from './modules/eventos_json.js';
+// import {buscarNoticias} from './modules/noticias.js';
+// import {buscarEventos} from './modules/eventos_json.js';
 
 // VARIABLES GLOBALES
 
@@ -32,13 +32,13 @@ window.onload = function () {
         Calendario();
         allowScrollIntoView();
         userName();
-        buscarNoticias();
-        buscarEventos();
+        // buscarNoticias();
+        // buscarEventos();
     }
 
     if (columnaIzquierda == null) {
 
-        buscarEventos();
+        // buscarEventos();
 
         document.getElementById("IntroducirEvento").onclick = function () {
             on()

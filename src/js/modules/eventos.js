@@ -1,5 +1,4 @@
 export {
-    CrearEventosFormulario as CrearEventosFormulario,
     OrdenarId as OrdenarId,
     OrdenarLugar as OrdenarLugar
 };

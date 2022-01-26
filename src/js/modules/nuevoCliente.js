@@ -13,9 +13,9 @@ import {nuevoEvento} from './API.js';
         let fechaFormulario = (document.getElementById("Fecha").value).trim();
 
         const evento = {
-            titulo,
-            lugar,
-            fecha
+            tituloFormulario,
+            lugarFormulario,
+            fechaFormulario
         };
         if(validar(evento)) {
             mostrarAlerta("Todos los campos son obligatorios");

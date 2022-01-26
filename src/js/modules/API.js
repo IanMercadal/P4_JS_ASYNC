@@ -16,3 +16,51 @@ export const nuevoEvento = async evento => {
         console.log(error);
     }
 }
+// Obtiene todos los eventos
+export const obtenerEventos = async () => {
+    try {
+        const resultado = await fetch(url);
+        const eventos = await resultado.json();
+        return eventos;
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+// Eliminar un evento
+export const eliminarEventos = async id => {
+    try {
+        await fetch(`${url}/${id}`,{
+            method: 'DELETE'
+        });
+    }catch (error) {
+        console.log(error);
+    }
+}
+
+// Obtiene un Eventos por su ID
+export const obtenerEvento = async id => {
+    try {
+        const resultado = await fetch(`${url}/${id}`);
+        const eventos = await resultado.json();
+        return eventos;
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+// Actualiza un registro
+export const editarEventos = async eventos => {
+    try{
+        await fetch(`${url}/${eventos.id}`,{
+            method: 'PUT',
+            body: JSON.stringify(eventos),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+        window.location.href = 'index.html';
+    }catch (error) {
+        console.log(error)
+    }
+}
