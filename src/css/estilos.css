@@ -200,6 +200,12 @@ ul.elementos li:hover{
 .imagen-evento{
     margin: 0.5rem;
 }
+.row-direction{
+    display: flex;
+    flex-direction: row;
+    margin: 1rem;
+    gap: 1rem;
+}
 @media(max-width: 1500px){
     .main{
         display: flex;

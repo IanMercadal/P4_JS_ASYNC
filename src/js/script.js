@@ -1,9 +1,4 @@
 // IMPORTS
-// import {OrdenarId,OrdenarLugar} from './modules/eventos.js';
-// import {mostrarEventos} from './modules/app.js';
-
-// import {buscarNoticias} from './modules/noticias.js';
-// import {buscarEventos} from './modules/eventos_json.js';
 
 // VARIABLES GLOBALES
 
@@ -32,13 +27,9 @@ window.onload = function () {
         Calendario();
         allowScrollIntoView();
         userName();
-        // buscarNoticias();
-        // buscarEventos();
     }
 
     if (columnaIzquierda == null) {
-
-        // buscarEventos();
 
         document.getElementById("IntroducirEvento").onclick = function () {
             on()
@@ -51,12 +42,6 @@ window.onload = function () {
                 overlayActivo = false
             }
         }
-
-        // document.getElementById("Enviar").addEventListener("click", function (event) {
-        //     event.preventDefault()
-        //     CrearEventosFormulario()
-        //     document.getElementById("Resetear").click()
-        // });
 
         document.getElementById("OrdenarId").onclick = function () {
             OrdenarId()

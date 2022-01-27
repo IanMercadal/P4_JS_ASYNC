@@ -1,11 +1,11 @@
 {
   "events": [
     {
-      "id": 1,
       "titulo": "Concierto I",
-      "imagen": "https://raw.githubusercontent.com/IanMercadal/P4_JS_ASYNC/main/src/img/eventos/musica/0.jpg",
       "lugar": "Grecia, Mikonos",
-      "fecha": "11/09/2002"
+      "fecha": "11/09/2002",
+      "imagen": "https://raw.githubusercontent.com/IanMercadal/P4_JS_ASYNC/main/src/img/eventos/musica/0.jpg",
+      "id": 1
     },
     {
       "id": 2,
@@ -20,13 +20,6 @@
       "imagen": "https://raw.githubusercontent.com/IanMercadal/P4_JS_ASYNC/main/src/img/eventos/musica/2.jpg",
       "lugar": "Laravelius, Laratropolis",
       "fecha": "11/09/2002"
-    },
-    {
-      "titulo": "ggfddf",
-      "imagen": "https://raw.githubusercontent.com/IanMercadal/P4_JS_ASYNC/main/src/img/eventos/musica/2.jpg",
-      "lugar": "dfvfdbdf",
-      "fecha": "01/28/2022",
-      "id": 4
     }
   ]
 }

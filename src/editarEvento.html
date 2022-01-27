@@ -56,46 +56,25 @@
             </li>
         </ul>
     </nav>
-    <nav class="menu-evento">
-        <ul class="elementos">
-           <li id="IntroducirEvento">
-                <p class="menu-evento-texto">Introducir Evento</p>
-            </li>
-
-            <div>
-                <p class="menu-evento-texto">Ordenar por:</p>
-                <div id="Ordenar">
-                    <li id="OrdenarLugar">
-                        <p class="menu-evento-texto">LUGAR</p>
-                    </li>
-                    <li id="OrdenarId">
-                        <p class="menu-evento-texto">ID</p>
-                    </li>
-                </div>
-            </div>
-        </ul>
-    </nav>
-    <div id="formulario">
+    <div id="formulario-editar">
         <form id="FormularioEventos">
-            <p id="CerrarEvento">x</p>
             <label for="Titulo">Introduce el Titulo:</label>
-            <input type="text" id="Titulo"><br>
+            <input type="text" id="titulo" name="titulo"><br>
 
             <label for="Lugar">Introduce el Lugar:</label>
-            <input type="text" id="Lugar"><br>
+            <input type="text" id="lugar" name="lugar"><br>
 
             <label for="Fecha">Introduce la Fecha:</label>
-            <input type="text" id="Fecha"><br>
+            <input type="text" id="fecha" name="fecha"><br>
             
             <label for="Titulo">Imagen del evento (URL):</label>
-            <input type="text" id="imagen"><br>
+            <input type="text" id="imagen" name="imagen"><br>
             
+            <input type="hidden" name="id" id="id" value="">
 
             <button id="Enviar">Guardar</button>
-            <input type="reset" id="Resetear">
         </form>
     </div>
-    <main id="listado-eventos"></main>
     <footer>
         <h3>
             Copyright <i class="far fa-copyright"></i> todos los derechos reservados 2021.
@@ -105,8 +84,6 @@
 </body>
 
 <!-- COMIENZO SCRIPTS -->
-<script type="module" src="js/script.js"></script>
-<script src="js/modules/app.js" type="module"></script>
-<script src="js/modules/nuevoEvento.js" type="module"></script>
+<script src="js/modules/editarEvento.js" type="module"></script>
 <!-- FINAL SCRIPTS -->
 </html>

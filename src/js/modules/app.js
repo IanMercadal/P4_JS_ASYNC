@@ -4,16 +4,15 @@ import {obtenerEventos, eliminarEvento} from './API.js';
 
     const listado = document.querySelector('#listado-eventos');
     document.addEventListener('DOMContentLoaded', mostrarEventos);
+    listado.addEventListener('click', confirmarEliminar);
 
     let eventosPagina = document.querySelector('#eventosPagina');
-
-    // listado.addEventListener('click', confirmarEliminar);
 
     async function mostrarEventos() {
         const eventos = await obtenerEventos();
         
         eventos.forEach(evento => {
-            const {titulo, imagen, lugar, fecha} = evento;
+            const {titulo, imagen, lugar, fecha, id} = evento;
 
             const divEvento = document.createElement('div');
             divEvento.classList.add('articulo');
@@ -38,14 +37,18 @@ import {obtenerEventos, eliminarEvento} from './API.js';
             divEvento.appendChild(infoDiv);
 
             if(eventosPagina) {
+                listado.classList.add('row-direction');
                 let EliminarButton = document.createElement('button');
-                EliminarButton.setAttribute('id','EliminarEvento');
+                EliminarButton.setAttribute('class','eliminar');
+                EliminarButton.setAttribute('data-evento',id);
                 EliminarButton.innerHTML = 'Borrar';
                 EliminarButton.addEventListener('click', confirmarEliminar);
                 divEvento.appendChild(EliminarButton);
 
-                let EditarButton = document.createElement('button');
-                EditarButton.setAttribute('id','EditarEvento');
+                let EditarButton = document.createElement('a');
+                EditarButton.setAttribute('class','editar');
+                EditarButton.setAttribute('data-evento',id);
+                EditarButton.setAttribute('href',`editarEvento.html?id=${id}`)
                 EditarButton.innerHTML = 'Editar';
                 EditarButton.addEventListener('click', confirmarEliminar);
                 divEvento.appendChild(EditarButton);
