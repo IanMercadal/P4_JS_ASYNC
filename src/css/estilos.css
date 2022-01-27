@@ -198,8 +198,6 @@ ul.elementos li:hover{
     margin: 0.5rem;
 }
 .imagen-evento{
-    width: 300px;
-    height: 200px;
     margin: 0.5rem;
 }
 @media(max-width: 1500px){
@@ -337,6 +335,12 @@ ul.elementos li:hover{
     margin-bottom: 5px;
     font-size:16px;
     color: var(--negro);
+}
+/* Listado de eventos */
+#listado-eventos{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 /* BOTON SCROLL */
 .boton-scroll, .botonCookie{
@@ -478,6 +482,7 @@ img{
 .texto {
     display: flex;
     justify-content: space-between;
+    gap: 2rem;
 }
 
 .articulo {
@@ -487,6 +492,7 @@ img{
     border-color: var(--complementario);
     display: grid;
     justify-content: center;
+    justify-items: center;
 }
 
 #salida {

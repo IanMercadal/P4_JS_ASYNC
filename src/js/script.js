@@ -52,11 +52,11 @@ window.onload = function () {
             }
         }
 
-        document.getElementById("Enviar").addEventListener("click", function (event) {
-            event.preventDefault()
-            CrearEventosFormulario()
-            document.getElementById("Resetear").click()
-        });
+        // document.getElementById("Enviar").addEventListener("click", function (event) {
+        //     event.preventDefault()
+        //     CrearEventosFormulario()
+        //     document.getElementById("Resetear").click()
+        // });
 
         document.getElementById("OrdenarId").onclick = function () {
             OrdenarId()
@@ -213,7 +213,7 @@ function allowScrollIntoView() {
 function scrollIntoViewMenu($id) {
 
     const nav = document.querySelector(".menu");
-    const eventos = document.getElementById("eventos");
+    const eventos = document.getElementById("listado-eventos");
     const noticias = document.getElementById("noticias");
     const calendario = document.getElementById("calendario");
 

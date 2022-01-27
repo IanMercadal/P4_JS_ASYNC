@@ -27,7 +27,7 @@
     </script>
 </head>
 
-<body>
+<body id="eventosPagina">
 
     <nav class="menu">
         <ul class="elementos">
@@ -61,6 +61,7 @@
            <li id="IntroducirEvento">
                 <p class="menu-evento-texto">Introducir Evento</p>
             </li>
+
             <div>
                 <p class="menu-evento-texto">Ordenar por:</p>
                 <div id="Ordenar">
@@ -78,28 +79,20 @@
         <form id="FormularioEventos">
             <p id="CerrarEvento">x</p>
             <label for="Titulo">Introduce el Titulo:</label>
-            <input type="text" id="Titulo" required><br>
+            <input type="text" id="Titulo"><br>
 
             <label for="Lugar">Introduce el Lugar:</label>
-            <input type="text" id="Lugar" required><br>
+            <input type="text" id="Lugar"><br>
 
             <label for="Fecha">Introduce la Fecha:</label>
-            <input type="text" id="Fecha" required><br>
+            <input type="text" id="Fecha"><br>
             
-            <p>Categoria del evento:</p>
-            <input type="radio" id="deportes" name="imagen">
-            <label for="deportes">Deportes</label><br>
+            <label for="Titulo">Imagen del evento (URL):</label>
+            <input type="text" id="imagen"><br>
             
-            <input type="radio" id="musica" name="imagen">
-            <label for="musica">Música</label><br>
-            
-            <input type="radio" id="arte" name="imagen">
-            <label for="arte">Arte</label><br>
-
-            <input type="radio" id="sociales" name="imagen">
-            <label for="sociales">Sociales</label><br>
 
             <button id="Enviar">Guardar</button>
+            <button id="EliminarEvento">Eliminar Evento</button>
             <input type="reset" id="Resetear">
         </form>
     </div>
@@ -115,5 +108,6 @@
 <!-- COMIENZO SCRIPTS -->
 <script type="module" src="js/script.js"></script>
 <script src="js/modules/app.js" type="module"></script>
+<script src="js/modules/nuevoEvento.js" type="module"></script>
 <!-- FINAL SCRIPTS -->
 </html>

@@ -1,26 +1,32 @@
 {
-    "events": [
-        {
-            "id": 1,
-            "titulo": "Concierto I",
-            "imagen": "https://raw.githubusercontent.com/classicoman2/fakeRESTserver/master/assets/image1.jpg",
-            "lugar": "Grecia, Mikonos",
-            "fecha": "11/09/2002"
-        },
-        {
-            "id": 2,
-            "titulo": "Concierto II",
-            "imagen": "https://raw.githubusercontent.com/classicoman2/fakeRESTserver/master/assets/image1.jpg",
-            "lugar": "Grecia, Mikonos",
-            "fecha": "11/09/2002"
-        },
-        {
-            "id": 3,
-            "titulo": "Concierto III",
-            "imagen": "https://raw.githubusercontent.com/classicoman2/fakeRESTserver/master/assets/image1.jpg",
-            "lugar": "Laravelius, Laratropolis",
-            "fecha": "11/09/2002"
-        }
-        
-    ]
+  "events": [
+    {
+      "id": 1,
+      "titulo": "Concierto I",
+      "imagen": "https://raw.githubusercontent.com/IanMercadal/P4_JS_ASYNC/main/src/img/eventos/musica/0.jpg",
+      "lugar": "Grecia, Mikonos",
+      "fecha": "11/09/2002"
+    },
+    {
+      "id": 2,
+      "titulo": "Concierto II",
+      "imagen": "https://raw.githubusercontent.com/IanMercadal/P4_JS_ASYNC/main/src/img/eventos/musica/1.jpg",
+      "lugar": "Grecia, Mikonos",
+      "fecha": "11/09/2002"
+    },
+    {
+      "id": 3,
+      "titulo": "Concierto III",
+      "imagen": "https://raw.githubusercontent.com/IanMercadal/P4_JS_ASYNC/main/src/img/eventos/musica/2.jpg",
+      "lugar": "Laravelius, Laratropolis",
+      "fecha": "11/09/2002"
+    },
+    {
+      "titulo": "ggfddf",
+      "imagen": "https://raw.githubusercontent.com/IanMercadal/P4_JS_ASYNC/main/src/img/eventos/musica/2.jpg",
+      "lugar": "dfvfdbdf",
+      "fecha": "01/28/2022",
+      "id": 4
+    }
+  ]
 }

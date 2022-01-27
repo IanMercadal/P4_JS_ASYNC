@@ -11,7 +11,6 @@ export const nuevoEvento = async evento => {
                 'Content-Type': 'application/json'
             }
         });
-        window.location.href = 'index.html';
     } catch(error){
         console.log(error);
     }
@@ -28,7 +27,7 @@ export const obtenerEventos = async () => {
 }
 
 // Eliminar un evento
-export const eliminarEventos = async id => {
+export const eliminarEvento = async id => {
     try {
         await fetch(`${url}/${id}`,{
             method: 'DELETE'
