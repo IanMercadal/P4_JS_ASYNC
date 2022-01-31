@@ -1,5 +1,5 @@
 // IMPORTS
-
+import {OrdenarId,OrdenarLugar} from './modules/eventos.js';
 // VARIABLES GLOBALES
 
 /*Creamos las variables globales primeramente, estas variables
@@ -282,7 +282,12 @@ function userName(){
     let userNameInfo = document.createElement("h2")
 
     if(document.cookie !== null){
-        userNameInfo.innerHTML = "Hola " + document.cookie;
+        let cadena = document.cookie;
+        // Buscamos el índice del espacio
+        // https://parzibyte.me/blog/2018/12/04/buscar-indice-posicion-elemento-arreglo-javascript/
+        let indice = cadena.indexOf("Usuario");
+        let extraida = cadena.substring(indice);
+        userNameInfo.innerHTML = extraida;
         userName.appendChild(userNameInfo);
     }
 }
