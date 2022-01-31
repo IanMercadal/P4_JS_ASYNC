@@ -1,5 +1,4 @@
 // IMPORTS
-import {OrdenarId,OrdenarLugar} from './modules/eventos.js';
 import {obtenerNoticias} from './modules/API.js';
 // VARIABLES GLOBALES
 

@@ -15,7 +15,7 @@ const nuevoUsuario = async usuario => {
     }
 }
 
-function insertarUsuario() {
+export function insertarUsuario() {
     let email = (document.getElementById("Correo").value).trim();
     let password = (document.getElementById("Contrasena").value).trim();
 

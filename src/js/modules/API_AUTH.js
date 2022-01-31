@@ -2,11 +2,11 @@ import {obtenerNoticias} from './API.js';
 
 const url = 'http://localhost:3001/auth/login';
 
-    const botonEnviar = document.querySelector('#Enviar');
-    botonEnviar.addEventListener('click', mostrarToken);
+    // const botonEnviar = document.querySelector('#Enviar');
+    // botonEnviar.addEventListener('click', mostrarToken);
 
 // Obtiene token
-function mostrarToken() {
+export function mostrarToken() {
     console.log("conectado")
     let user = document.querySelector('#Correo').value;
     let password = document.querySelector('#Contrasena').value;    

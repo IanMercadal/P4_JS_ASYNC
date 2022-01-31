@@ -1,3 +1,5 @@
+import {insertarUsuario} from './API_REGISTER.js';
+
 const Nombre = document.querySelector("#Nombre");
 const Correo = document.querySelector("#Correo");
 const Contrasena = document.querySelector("#Contrasena");
@@ -240,6 +242,7 @@ function IntroducirDatos() {
     usuarios.push(usuario);
     localStorage.setItem("Usuarios", JSON.stringify(usuarios))
     Mostrar("El registro se ha realizado de forma correcta")
+    insertarUsuario();
 }
 
 // Crea el usuario por defecto de la web
