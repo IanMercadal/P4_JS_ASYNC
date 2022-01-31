@@ -59,7 +59,19 @@ async function mostrarNoticias() {
     const noticias = await obtenerNoticias();
         noticias.forEach(noticia => {
             const {titulo, imagen, texto, fecha} = noticia;
-            console.log(noticia);
+            console.log(noticia)
+            noticiasContainer.innerHTML += `
+            <div class="noticia">
+                <div class="info-noticia">
+                    <h3>${titulo}</h3>
+                    <p>${fecha}</p>
+                </div>
+                <div class="grafico-noticia">
+                    <img class="imagen-noticia" src="${imagen}">
+                    <p> ${texto}</p>
+                </div>
+            </div>
+            `;
         })
 }
 //INDICE
@@ -237,43 +249,6 @@ function scrollIntoViewMenu($id) {
         });
     }
 }
-
-//COOKIES
-// function Cookies() {
-
-//     var galleta = document.cookie;
-//     if (galleta == "") {
-//         setTimeout(function () {
-//             // alert("Acepta la cookie");
-//             const body = document.getElementsByTagName("body");
-//             let cookieOverlay = document.createElement("button");
-//             let cookieOverlayText = document.createElement("p");
-//             let cookieParent = document.createElement("div");
-
-//             cookieOverlay.classList.add('cookieOverlay');
-//             cookieParent.classList.add('cookieParent');
-//             cookieOverlayText.classList.add('botonCookie');
-//             cookieOverlay.setAttribute("onclick", "aceptarCookie()");
-//             cookieOverlayText.innerHTML = "Aceptar Cookie";
-
-//             document.body.appendChild(cookieParent);
-//             cookieParent.appendChild(cookieOverlay);
-//             cookieOverlay.appendChild(cookieOverlayText);
-
-//             cookieOverlay.onclick = function () {
-//                 aceptarCookie()
-//             }
-//         }, 3000)
-//     }
-// }
-
-// function aceptarCookie() {
-//     let cookieParent = document.querySelector(".cookieParent");
-//     var fechaGalleta = new Date();
-//     fechaGalleta.setTime(fechaGalleta.getTime() + (7 * 24 * 60 * 60 * 1000));
-//     document.cookie = "expires=" + fechaGalleta.toUTCString() + ";"
-//     document.body.removeChild(cookieParent);
-// };
 
 //OVERLAY
 /*Mostrar el formulario*/

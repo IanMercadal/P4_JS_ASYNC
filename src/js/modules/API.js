@@ -1,5 +1,5 @@
 const url = 'http://localhost:3000/events';
-const urlNoticias = 'http://localhost:3000/auth/login/noticias';
+const urlNoticias = 'http://localhost:3001/auth/login/noticias';
 
 // Cuando se crea un nuevo evento
 export const nuevoEvento = async evento => {
@@ -66,12 +66,17 @@ export const editarEventos = async eventos => {
 }
 
 // Obtiene todos las noticias
-export const obtenerNoticias = async () => {
-    try {
+export const obtenerNoticias = async (token) => {
+
+    try{
+        await fetch(urlNoticias, {
+            method: 'GET',
+            headers: { Authorization: 'Bearer ' + token }
+        });
         const resultado = await fetch(urlNoticias);
         const noticias = await resultado.json();
         return noticias;
-    } catch (error) {
+    } catch(error){
         console.log(error);
     }
 }
