@@ -5,7 +5,7 @@ function mostrarToken() {
     let user = document.querySelector('#Correo').value;
     let password = document.querySelector('#Contrasena').value;    
 
-    fetch('http://localhost:3001/auth/login', {
+    fetch(url, {
     method: 'GET',
     headers: { Authorization: 'Basic ' + btoa(user + ':' + password) }
     })
