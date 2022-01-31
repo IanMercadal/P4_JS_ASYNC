@@ -1,5 +1,6 @@
 // IMPORTS
 import {OrdenarId,OrdenarLugar} from './modules/eventos.js';
+import {obtenerNoticias} from './modules/API.js';
 // VARIABLES GLOBALES
 
 /*Creamos las variables globales primeramente, estas variables
@@ -20,7 +21,7 @@ var overlayActivo = false;
 
 window.onload = function () {
 
-    Cookies();
+    // Cookies();
     hamburgerMenu();
 
     if (columnaIzquierda) {
@@ -52,7 +53,15 @@ window.onload = function () {
         }
     }
 }
+async function mostrarNoticias() {
+    const noticiasContainer = document.querySelector('.noticias-container');
 
+    const noticias = await obtenerNoticias();
+        noticias.forEach(noticia => {
+            const {titulo, imagen, texto, fecha} = noticia;
+            console.log(noticia);
+        })
+}
 //INDICE
 
 function hamburgerMenu() {
@@ -230,41 +239,41 @@ function scrollIntoViewMenu($id) {
 }
 
 //COOKIES
-function Cookies() {
+// function Cookies() {
 
-    var galleta = document.cookie;
-    if (galleta == "") {
-        setTimeout(function () {
-            // alert("Acepta la cookie");
-            const body = document.getElementsByTagName("body");
-            let cookieOverlay = document.createElement("button");
-            let cookieOverlayText = document.createElement("p");
-            let cookieParent = document.createElement("div");
+//     var galleta = document.cookie;
+//     if (galleta == "") {
+//         setTimeout(function () {
+//             // alert("Acepta la cookie");
+//             const body = document.getElementsByTagName("body");
+//             let cookieOverlay = document.createElement("button");
+//             let cookieOverlayText = document.createElement("p");
+//             let cookieParent = document.createElement("div");
 
-            cookieOverlay.classList.add('cookieOverlay');
-            cookieParent.classList.add('cookieParent');
-            cookieOverlayText.classList.add('botonCookie');
-            cookieOverlay.setAttribute("onclick", "aceptarCookie()");
-            cookieOverlayText.innerHTML = "Aceptar Cookie";
+//             cookieOverlay.classList.add('cookieOverlay');
+//             cookieParent.classList.add('cookieParent');
+//             cookieOverlayText.classList.add('botonCookie');
+//             cookieOverlay.setAttribute("onclick", "aceptarCookie()");
+//             cookieOverlayText.innerHTML = "Aceptar Cookie";
 
-            document.body.appendChild(cookieParent);
-            cookieParent.appendChild(cookieOverlay);
-            cookieOverlay.appendChild(cookieOverlayText);
+//             document.body.appendChild(cookieParent);
+//             cookieParent.appendChild(cookieOverlay);
+//             cookieOverlay.appendChild(cookieOverlayText);
 
-            cookieOverlay.onclick = function () {
-                aceptarCookie()
-            }
-        }, 3000)
-    }
-}
+//             cookieOverlay.onclick = function () {
+//                 aceptarCookie()
+//             }
+//         }, 3000)
+//     }
+// }
 
-function aceptarCookie() {
-    let cookieParent = document.querySelector(".cookieParent");
-    var fechaGalleta = new Date();
-    fechaGalleta.setTime(fechaGalleta.getTime() + (7 * 24 * 60 * 60 * 1000));
-    document.cookie = "expires=" + fechaGalleta.toUTCString() + ";"
-    document.body.removeChild(cookieParent);
-};
+// function aceptarCookie() {
+//     let cookieParent = document.querySelector(".cookieParent");
+//     var fechaGalleta = new Date();
+//     fechaGalleta.setTime(fechaGalleta.getTime() + (7 * 24 * 60 * 60 * 1000));
+//     document.cookie = "expires=" + fechaGalleta.toUTCString() + ";"
+//     document.body.removeChild(cookieParent);
+// };
 
 //OVERLAY
 /*Mostrar el formulario*/
@@ -281,13 +290,22 @@ function userName(){
     let userName = document.querySelector("#user-name")
     let userNameInfo = document.createElement("h2")
 
-    if(document.cookie !== null){
+    if(document.cookie == ''){
+
+        const noticiasContainer = document.querySelector('.noticias-container');
+        let texto = document.createElement('p');
+        texto.innerHTML = "Debe iniciar sesión para ver las noticias";
+        console.log(texto)
+        noticiasContainer.appendChild(texto);
+    
+    }
+    else{
         let cadena = document.cookie;
-        // Buscamos el índice del espacio
-        // https://parzibyte.me/blog/2018/12/04/buscar-indice-posicion-elemento-arreglo-javascript/
         let indice = cadena.indexOf("Usuario");
         let extraida = cadena.substring(indice);
         userNameInfo.innerHTML = extraida;
         userName.appendChild(userNameInfo);
+
+        mostrarNoticias();
     }
 }

@@ -1,4 +1,5 @@
 const url = 'http://localhost:3000/events';
+const urlNoticias = 'http://localhost:3000/auth/login/noticias';
 
 // Cuando se crea un nuevo evento
 export const nuevoEvento = async evento => {
@@ -61,5 +62,16 @@ export const editarEventos = async eventos => {
         window.location.href = 'index.html';
     }catch (error) {
         console.log(error)
+    }
+}
+
+// Obtiene todos las noticias
+export const obtenerNoticias = async () => {
+    try {
+        const resultado = await fetch(urlNoticias);
+        const noticias = await resultado.json();
+        return noticias;
+    } catch (error) {
+        console.log(error);
     }
 }

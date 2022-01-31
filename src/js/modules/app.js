@@ -1,4 +1,4 @@
-import {obtenerEventos, eliminarEvento} from './API.js';
+import {obtenerEventos, eliminarEvento, obtenerNoticias} from './API.js';
 
 (function(){
 
