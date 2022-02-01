@@ -17,15 +17,15 @@ Es necesario tener instalado el json-server.
 ### Creación de eventos
 
 - Aquí se mostraría el formulario para crear un evento, no haría falta estar registrado o logueado.
-![Aqui estaria la imagen de Eventos](https://github.com/IanMercadal/P4_JS_ASYNC/tree/main/docs/CrearEvento.PNG) 
+![Aqui estaria la imagen de Eventos](https://raw.githubusercontent.com/IanMercadal/P4_JS_ASYNC/main/docs/CrearEvento.PNG) 
 
 - Aquí se mostraría el evento creado
-![Aqui estaria la imagen de Eventos](https://github.com/IanMercadal/P4_JS_ASYNC/tree/main/docs/EventoCreado.PNG) 
+![Aqui estaria la imagen de Eventos](https://raw.githubusercontent.com/IanMercadal/P4_JS_ASYNC/main/docs/EventoCreado.PNG) 
 
 - El usuario debe estar logueado para ver las noticias.
-![Aqui estaria la imagen de Eventos](https://github.com/IanMercadal/P4_JS_ASYNC/tree/main/docs/NoLogin.PNG) 
+![Aqui estaria la imagen de Eventos](https://raw.githubusercontent.com/IanMercadal/P4_JS_ASYNC/main/docs/NoLogin.PNG) 
 
 - El usuario está logueado para ver las noticias.
-![Aqui estaria la imagen de Eventos](https://github.com/IanMercadal/P4_JS_ASYNC/tree/main/docs/UserLoged.PNG) 
+![Aqui estaria la imagen de Eventos](https://raw.githubusercontent.com/IanMercadal/P4_JS_ASYNC/main/docs/UserLoged.PNG) 
 
 - De otro modo cabe resaltar que los usuarios a la hora de registrarse e iniciar sesión deben pasar una validación.
