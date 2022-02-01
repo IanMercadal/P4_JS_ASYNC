@@ -9,7 +9,8 @@ const nuevoUsuario = async usuario => {
             headers: {
                 'Content-Type': 'application/json'
             }
-        });
+        })
+        .then(window.location.href = 'index.html');
     } catch(error){
         console.log(error);
     }

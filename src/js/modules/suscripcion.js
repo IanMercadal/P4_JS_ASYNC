@@ -60,7 +60,7 @@ window.onload = function () {
     document.getElementById("Contrasena").onblur = function () {
         contrasenaEstado = (Contrasena.value).trim()
         contrasenaTamano = contrasenaEstado.length
-        OcultarFormulario(contrasenaTamano, Contrasena)
+        // OcultarFormulario(contrasenaTamano, Contrasena)
         ComprobarContra()
     }
 
@@ -74,7 +74,8 @@ window.onload = function () {
     }
 
     document.getElementById("contrasena1").onmouseup = function () {
-        OcultarFormulario(contrasenaTamano, Contrasena)
+        // OcultarFormulario
+        contrasenaTamano, Contrasena
     }
 
     
@@ -92,7 +93,7 @@ window.onload = function () {
     document.getElementById("RepetirContrasena").onblur = function () {
         repetirContraEstado = (RepetirContrasena.value).trim()
         repetirContraTamano = repetirContraEstado.length
-        OcultarFormulario(repetirContraTamano, RepetirContrasena)
+        // OcultarFormulario(repetirContraTamano, RepetirContrasena)
         ComprobarContra()
     }
 
@@ -106,7 +107,8 @@ window.onload = function () {
     }
 
     document.getElementById("contrasena2").onmouseup = function () {
-        OcultarFormulario(repetirContraTamano, RepetirContrasena)
+        // OcultarFormulario(
+            repetirContraTamano, RepetirContrasena
     }
 
     // Validar la información que se envia al formulario
@@ -142,7 +144,7 @@ function ComprobarEmail() {
     correoEstado = Correo.value
     correoIgual = true
     usuarios.forEach(ValidarEmail);
-    if (correoEstado.match(regExp) && correoIgual != false) {
+    if (correoIgual != false) {
         return true
     } else {
         return false
@@ -216,13 +218,14 @@ function ColorError(validador, campo) {
 
 /* Se envia el tamaño de la contraseña y el campo del formulario en el que se quiere
 introducir, se aplica en ocultar la contraseña*/
-function OcultarFormulario(tamano, formulario) {
-    var mensaje = "";
-    for (let index = 0; index < tamano; index++) {
-        mensaje += "*"
-    }
-    formulario.value = mensaje
-}
+
+// function OcultarFormulario(tamano, formulario) {
+//     var mensaje = "";
+//     for (let index = 0; index < tamano; index++) {
+//         mensaje += "*"
+//     }
+//     formulario.value = mensaje
+// }
 
 /* Coge el valor que tenga la palabra y lo muestra, se utiliza para mostrar la contraseña*/
 function MostrarFormulario(palabra, formulario) {

@@ -476,7 +476,12 @@ footer{
     background-color: var(--complementario);
     color: var(--blanco);
     border: none;
-    padding: 0.5rem;
+    
+}
+.btn a{
+    justify-content: center;
+    text-align: center;
+    margin: 1rem;
 }
 #formulario {
     display: none;
@@ -532,7 +537,7 @@ justify-content: space-around;
 align-items: center;
 }
 
-.papelera, .editar{
+.papelera{
     max-width: 50px;
 }
 

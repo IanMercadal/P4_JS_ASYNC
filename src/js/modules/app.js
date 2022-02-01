@@ -36,23 +36,29 @@ import {obtenerEventos, eliminarEvento} from './API.js';
             infoDiv.appendChild(fechaDiv);
             divEvento.appendChild(infoDiv);
 
+            let divButton = document.createElement('div');
+            divButton.classList.add('botones');
+
             if(eventosPagina) {
                 listado.classList.add('row-direction');
+
                 let EliminarButton = document.createElement('button');
-                EliminarButton.setAttribute('class','eliminar');
+                EliminarButton.setAttribute('class','eliminar btn');
                 EliminarButton.setAttribute('data-evento',id);
                 EliminarButton.innerHTML = 'Borrar';
                 EliminarButton.addEventListener('click', confirmarEliminar);
-                divEvento.appendChild(EliminarButton);
+                divButton.appendChild(EliminarButton);
 
                 let EditarButton = document.createElement('a');
-                EditarButton.setAttribute('class','editar');
+                EditarButton.setAttribute('class','editar btn');
                 EditarButton.setAttribute('data-evento',id);
                 EditarButton.setAttribute('href',`editarEvento.html?id=${id}`)
                 EditarButton.innerHTML = 'Editar';
                 EditarButton.addEventListener('click', confirmarEliminar);
-                divEvento.appendChild(EditarButton);
+
+                divButton.appendChild(EditarButton);
             }
+            divEvento.appendChild(divButton);
             listado.appendChild(divEvento);
         })
     }

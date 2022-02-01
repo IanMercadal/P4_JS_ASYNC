@@ -42,14 +42,6 @@ window.onload = function () {
                 overlayActivo = false
             }
         }
-
-        document.getElementById("OrdenarId").onclick = function () {
-            OrdenarId()
-        }
-
-        document.getElementById("OrdenarLugar").onclick = function () {
-            OrdenarLugar()
-        }
     }
 }
 async function mostrarNoticias() {

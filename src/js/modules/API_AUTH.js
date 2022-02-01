@@ -60,11 +60,3 @@ function mostrarToken() {
         window.location.href = 'index.html';
     });
 }
-
-// function validarStatus(respuesta) {
-//     if(respuesta.status !== 200) {
-//         mostrarAlerta('Erro de inicio de sesión');
-//         return;
-//     }
-//     respuesta.json()
-// }
