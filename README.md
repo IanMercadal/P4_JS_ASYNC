@@ -1,4 +1,31 @@
 # P-4_JS_ASYNC
 
-## Comando para iniciar json
-json-server --watch src/api/crud.json
+## Guia de comando para iniciar JSON
+
+### Comando para iniciar json src
+- npm i
+- npm audit fix
+- npm run dev
+
+### Comando para iniciar json fake-api
+Es necesario tener instalado el json-server.
+
+- json-server --watch src/api/crud.json
+
+## Funcionamiento
+
+### Creación de eventos
+
+- Aquí se mostraría el formulario para crear un evento, no haría falta estar registrado o logueado.
+![Aqui estaria la imagen de Eventos](https://github.com/IanMercadal/P4_JS_ASYNC/tree/main/docs/CrearEvento.PNG) 
+
+- Aquí se mostraría el evento creado
+![Aqui estaria la imagen de Eventos](https://github.com/IanMercadal/P4_JS_ASYNC/tree/main/docs/EventoCreado.PNG) 
+
+- El usuario debe estar logueado para ver las noticias.
+![Aqui estaria la imagen de Eventos](https://github.com/IanMercadal/P4_JS_ASYNC/tree/main/docs/NoLogin.PNG) 
+
+- El usuario está logueado para ver las noticias.
+![Aqui estaria la imagen de Eventos](https://github.com/IanMercadal/P4_JS_ASYNC/tree/main/docs/UserLoged.PNG) 
+
+- De otro modo cabe resaltar que los usuarios a la hora de registrarse e iniciar sesión deben pasar una validación.

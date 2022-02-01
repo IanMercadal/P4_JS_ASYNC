@@ -20,6 +20,13 @@
       "imagen": "https://raw.githubusercontent.com/IanMercadal/P4_JS_ASYNC/main/src/img/eventos/musica/2.jpg",
       "lugar": "Laravelius, Laratropolis",
       "fecha": "11/09/2002"
+    },
+    {
+      "titulo": "Evento Nuevo",
+      "imagen": "https://raw.githubusercontent.com/IanMercadal/P4_JS_ASYNC/main/src/img/eventos/sociales/0.jpg",
+      "lugar": "Palma, Mallorca",
+      "fecha": "02/02/2022",
+      "id": 4
     }
   ]
 }
