@@ -58,7 +58,6 @@ async function mostrarNoticias() {
     const noticias = await obtenerNoticias();
         noticias.forEach(noticia => {
             const {titulo, imagen, texto, fecha} = noticia;
-            console.log(noticia)
             noticiasContainer.innerHTML += `
             <div class="noticia">
                 <div class="info-noticia">
@@ -269,7 +268,6 @@ function userName(){
         const noticiasContainer = document.querySelector('.noticias-container');
         let texto = document.createElement('p');
         texto.innerHTML = "Debe iniciar sesión para ver las noticias";
-        console.log(texto)
         noticiasContainer.appendChild(texto);
     
     }

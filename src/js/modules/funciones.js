@@ -8,7 +8,13 @@ export function mostrarAlerta(mensaje) {
         alerta.innerHTML = `Error de ${mensaje}`;
 
         const formulario = document.querySelector('#FormularioEventos');
-        formulario.appendChild(alerta);
+
+        if(!formulario) {
+            const errores = document.querySelector('#errores');
+            errores.appendChild(alerta);
+        } else {
+            formulario.appendChild(alerta);
+        }
 
         setTimeout(function() {
             alerta.remove();

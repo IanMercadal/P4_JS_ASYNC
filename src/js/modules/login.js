@@ -40,7 +40,7 @@ function guardar() {
 
         if(usuario.correo == Correo.value && usuario.contrasena == Contrasena.value){
             nameUser = usuario.nombre;
-            mostrarToken();
+            // mostrarToken();
             return;
         }
         else{
@@ -79,11 +79,11 @@ function guardar() {
     let countNumeros = (ContrasenaEstado.match(/\d/g) || []).length;
     let countMayus = (ContrasenaEstado.match(/[A-Z]/g) || []).length;
 
-    if(ContrasenaLongitud < 6){
-        tipoError = "longitud";
-        mostrarErrorContrasena(tipoError);
-        return;
-    }
+    // if(ContrasenaLongitud < 6){
+    //     tipoError = "longitud";
+    //     mostrarErrorContrasena(tipoError);
+    //     return;
+    // }
     if(countMayus < 1){
         tipoError = "mayuscula";
         mostrarErrorContrasena(tipoError);
@@ -133,9 +133,9 @@ function mostrarErrorContrasena(tipoError){
     let errorCC = document.createElement("div");
 
     switch (tipoError) {
-        case "longitud":
-            errorCC.innerHTML = "Error de contraseña, mínimo 6 caracteres.";
-            break;
+        // case "longitud":
+        //     errorCC.innerHTML = "Error de contraseña, mínimo 6 caracteres.";
+        //     break;
         case "mayuculas":
             errorCC.innerHTML = "Error de contraseña, no contiene mayúsculas.";
             break;
